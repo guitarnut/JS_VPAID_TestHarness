@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>VPAID JavaScript Test Harness</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/foundation.css"/>
+
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <style type="text/css" media="screen">
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 0.7em;
+            color: rgba(0, 0, 0, .8);
+        }
+
+        h4 {
+            margin-top: 10px;
+        }
+
+        select {
+            padding: 3px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            font-size: 0.7em;
+        }
+
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>VPAID JS Test Harness</h2>
+
+            <form>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input class="large-9 columns" type="text" id="source" placeholder="VPAID JS Script"/>
+                    </div>
+                    <div class="large-12 columns">
+                        <select class="large-9 columns" id="sourceArchive" placeholder="FOO">
+                            </select>
+                    </div>
+                </div>
+            </form>
+            <button id="load" class="button tiny">LOAD</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h4>VPAID Methods</h4>
+            <button id="handshakeVersion" class="button tiny">handshakeVersion()</button>
+            <button id="initAd" class="button tiny">initAd()</button>
+            <button id="startAd" class="button tiny">startAd()</button>
+            <button id="stopAd" class="button tiny">stopAd()</button>
+            <button id="pauseAd" class="button tiny">pauseAd()</button>
+            <button id="resumeAd" class="button tiny">resumeAd()</button>
+            <button id="expandAd" class="button tiny">expandAd()</button>
+            <button id="collapseAd" class="button tiny">collapseAd()</button>
+            <button id="skipAd" class="button tiny">skipAd()</button>
+            <button id="resizeAd" class="button tiny">resizeAd()</button>
+            <button id="setAdVolume" class="button tiny">setAdVolume()</button>
+            <button id="getAdVolume" class="button tiny">getAdVolume()</button>
+            <button id="getAdLinear" class="button tiny">getAdLinear()</button>
+            <button id="getAdWidth" class="button tiny">getAdWidth()</button>
+            <button id="getAdHeight" class="button tiny">getAdHeight()</button>
+            <button id="getAdExpanded" class="button tiny">getAdExpanded()</button>
+            <button id="getAdSkippableState" class="button tiny">getAdSkippableState()</button>
+            <button id="getAdRemainingTime" class="button tiny">getAdRemainingTime()</button>
+            <button id="getAdDuration" class="button tiny">getAdDuration()</button>
+            <button id="getAdCompanions" class="button tiny">getAdCompanions()</button>
+            <button id="getAdIcons" class="button tiny">getAdIcons()</button>
+            <button id="safeFrameOn" class="button tiny">$sf On</button>
+            <button id="safeFrameOff" class="button tiny">$sf Off</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h4>Creative Vars</h4>
+            <input id="creativeVars" placeholder="creative vars" value="" class="large-12 columns" type="text">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h4>Resize Ad</h4>
+            <input id="resizeW" placeholder="width" value="" class="large-6 columns" type="text">
+            <input id="resizeH" placeholder="height" value="" class="large-6 columns" type="text">
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <h4>Set Volume</h4>
+            <input id="volume" placeholder="volume" value="" class="large-6 columns" type="text">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="large-12 columns">
+        <h4>Creative DIV and Video Element</h4>
+
+        <div id="videoSlot" style="width: 500px; height: 300px; border: 1px solid #000000; position: relative;">
+            <video id="videoPlayer" style="width: 500px; height: 300px;"></video>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="script/vpaidharness.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+</body>
+</html>
